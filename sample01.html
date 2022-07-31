@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sort() - 문자</title>
+</head>
+<body>
+    <script>
+        const str1 = ['a','b', 'f','d']
+        str1.sort((a,b) => {
+            if(a>b) return 1
+            if(a<b) return -1
+            if(a===b) return 0
+        })
+        document.write('올림차순: ',str1,'<br>')
+
+        const str2 = ['a', 'b', 'f', 'd']
+        str2.sort((a, b) => {
+            if (b>a) return 1
+            if (b<a) return -1
+            if (b===a) return 0
+        })
+        document.write('내림차순: ', str2,'<br>')
+    </script>
+</body>
+</html>

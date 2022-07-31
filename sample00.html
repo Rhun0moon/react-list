@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sort() - 숫자</title>
+</head>
+<body>
+    <script>
+        // 배열 -> 정렬
+        // 아스크키(아스키코드를 말하는 거 같음) -> 숫자 -> 숫자, 알파벳, 한글
+        // 올림차순 -> 내림차순 : sort()
+
+        // 숫자방법 : sort(콜백함수)
+        //            (a,b) => { return a-b}
+
+        // 문자방법 : sort(콜백함수) (a, b 위치가 바뀌면 내림차순)
+        //            (a,b) => a>b return 1 -> 올림차순
+        //            (a,b) => a<b return -1
+        //            (a,b) => a===b return 0 
+
+        const num = [4,11,2,67,9]
+        console.log(num.sort()) // 11, 2, 4, 67, 9
+        document.write('일반 아스키 모드: '+num.sort()+'<br>')
+
+        const num1 = num.sort((a,b)=>{return a-b})
+        document.write('올림차순: ',num1,'<br>')
+
+        const num2 = num.sort((a, b) => { return b-a })
+        document.write('내림차순: ',num2,'<br>')
+
+    </script>
+</body>
+</html>
